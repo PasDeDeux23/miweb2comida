@@ -8,60 +8,60 @@
 }
 
 body {
-    /* Serif elegante para títulos y sans-serif para textos */
     font-family: "Georgia", "Times New Roman", serif;
-    background: #fefefe;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
     color: #3a3a3a;
     line-height: 1.7;
-    padding: 2rem 1.25rem; /* Unidades relativas para escalar */
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    padding: clamp(1rem, 5vw, 2rem) clamp(0.625rem, 3vw, 1.25rem); /* Escala fluido */
 }
 
-/* Contenedor principal */
+/* Contenedor principal - Usa % para fluidez */
 main {
-    max-width: 850px;
-    margin: 3rem auto;
-    padding: 2.5rem 3.75rem;
+    max-width: 90%;
+    margin: clamp(2rem, 8vw, 3rem) auto;
+    padding: clamp(1.5rem, 6vw, 2.5rem) clamp(2rem, 8vw, 3.75rem);
     background: white;
-    border-radius: 1rem;
-    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.1);
-    font-family: Arial, Helvetica, sans-serif; /* para texto */
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+    box-shadow: 0 clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem) rgba(0,0,0,0.1);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header y navegación */
 header {
-    background-color: #ffffffdd; /* Blanco con un poco de transparencia para suavidad */
-    padding: 0.9375rem 0;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-    border-radius: 0.75rem;
-    max-width: 900px;
-    margin: 0 auto 2.5rem auto;
-    backdrop-filter: saturate(180%) blur(0.75rem); /* efecto cristal suave */
+    background-color: #ffffffdd;
+    padding: clamp(0.75rem, 3vw, 0.9375rem) 0;
+    box-shadow: 0 clamp(0.125rem, 1vw, 0.25rem) clamp(0.5rem, 2vw, 0.75rem) rgba(0,0,0,0.1);
+    border-radius: clamp(0.5rem, 2vw, 0.75rem);
+    max-width: 95%;
+    margin: 0 auto clamp(1.5rem, 6vw, 2.5rem) auto;
+    backdrop-filter: saturate(180%) blur(clamp(0.5rem, 2vw, 0.75rem));
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    flex-wrap: wrap; /* Envuelve solo si cabe, mantiene horizontal */
+    gap: clamp(0.75rem, 4vw, 2.5rem);
     font-family: "Georgia", "Times New Roman", serif;
+    padding: 0 clamp(0.5rem, 2vw, 0.9375rem);
 }
 
 nav ul li a {
     font-weight: 600;
-    font-size: 1.15rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
     text-decoration: none;
     color: #555555;
-    padding: 0.75rem 1.5rem;
-    border-radius: 1.5rem;
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
     transition: all 0.35s ease;
     border: 2px solid transparent;
     background: #f7f9fc;
-    box-shadow: 0 0.1875rem 0.375rem rgba(0,0,0,0.05);
+    box-shadow: 0 clamp(0.125rem, 1vw, 0.1875rem) clamp(0.25rem, 2vw, 0.375rem) rgba(0,0,0,0.05);
     letter-spacing: 0.03em;
     user-select: none;
     display: inline-block;
-    white-space: nowrap; /* Evita que el texto se rompa */
+    white-space: nowrap; /* Evita romper texto */
 }
 
 nav ul li a:hover,
@@ -69,20 +69,20 @@ nav ul li a:focus {
     color: #ffffff;
     background: #2980b9;
     border-color: #2980b9;
-    box-shadow: 0 0.5rem 0.9375rem rgba(41, 128, 185, 0.4);
+    box-shadow: 0 clamp(0.25rem, 2vw, 0.5rem) clamp(0.5rem, 3vw, 0.9375rem) rgba(41, 128, 185, 0.4);
     outline: none;
-    transform: translateY(-0.1875rem);
+    transform: translateY(-0.125rem);
 }
 
-/* Título principal */
+/* Título principal - Escala fluido */
 h1 {
     font-family: "Georgia", "Times New Roman", serif;
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 3rem); /* Escala fluidamente entre 2rem y 3rem */
+    font-size: clamp(2rem, 6vw, 3rem);
     color: #222222;
-    margin-bottom: 3.75rem;
+    margin-bottom: clamp(2.5rem, 8vw, 3.75rem);
     text-align: center;
-    letter-spacing: 0.06875rem;
+    letter-spacing: clamp(0.05rem, 0.5vw, 0.06875rem);
     text-transform: uppercase;
     text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.07);
 }
@@ -91,21 +91,21 @@ h1 {
 h2 {
     font-family: "Georgia", "Times New Roman", serif;
     font-weight: 700;
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Escala fluidamente */
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #2c3e50;
-    border-left: 0.3125rem solid #2980b9;
-    padding-left: 0.9375rem;
+    border-left: clamp(0.25rem, 0.5vw, 0.3125rem) solid #2980b9;
+    padding-left: clamp(0.5rem, 2vw, 0.9375rem);
     margin-bottom: 1.125rem;
-    margin-top: 3.125rem;
+    margin-top: clamp(2rem, 6vw, 3.125rem);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 /* Párrafos descriptivos */
 p {
-    font-size: clamp(1rem, 2.5vw, 1.1rem); /* Escala fluidamente */
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: #555;
-    margin-bottom: 1.875rem;
+    margin-bottom: clamp(1.5rem, 4vw, 1.875rem);
     font-weight: 400;
     line-height: 1.65;
     font-style: italic;
@@ -115,17 +115,17 @@ p {
 /* Listas */
 ul {
     list-style: none;
-    padding-left: 1.5625rem;
-    margin-bottom: 3.75rem;
+    padding-left: clamp(1rem, 3vw, 1.5625rem);
+    margin-bottom: clamp(3rem, 8vw, 3.75rem);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 ul li {
     position: relative;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: #3a3a3a;
-    padding-left: 1.875rem;
-    margin-bottom: 1rem;
+    padding-left: clamp(1.25rem, 4vw, 1.875rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
     font-weight: 600;
     letter-spacing: 0.02em;
     transition: color 0.3s ease;
@@ -133,7 +133,7 @@ ul li {
 
 /* Icono elegante antes de cada li */
 ul li::before {
-    content: "\2022"; /* Bullet */
+    content: "\2022";
     position: absolute;
     left: 0;
     top: 0;
@@ -147,50 +147,24 @@ ul li::before {
 /* Footer */
 footer {
     text-align: center;
-    padding: 1.25rem 0;
-    font-size: 0.9rem;
+    padding: clamp(0.75rem, 3vw, 1.25rem) 0;
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
     font-family: Arial, Helvetica, sans-serif;
     color: #888;
     letter-spacing: 0.05em;
-    margin-top: 5rem;
+    margin-top: clamp(3rem, 10vw, 5rem);
     border-top: 1px solid #ddd;
 }
 
-/* Responsive - Enfoque mobile-first con cambios mínimos para similitud */
+/* Media queries mínimas: Solo ajustes ultra-suaves para pantallas <768px (tablets/móviles) */
 @media (max-width: 768px) {
-    body {
-        padding: 1.25rem 0.625rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 0.9375rem;
-        padding: 0 0.9375rem;
-        justify-content: center;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 0.625rem 1.25rem;
-    }
-
-    header {
-        padding: 0.75rem 0;
-        border-radius: 0.5rem;
-        max-width: 95%;
-        margin-bottom: 1.875rem;
-    }
-
     main {
-        padding: 1.875rem 1.875rem;
-        margin: 1.875rem auto;
         max-width: 95%;
         border-radius: 0.75rem;
     }
 
-    h1 {
-        margin-bottom: 2.5rem;
-        letter-spacing: 0.05rem;
+    nav ul {
+        gap: clamp(0.5rem, 3vw, 1rem);
     }
 
     h2 {
@@ -198,34 +172,19 @@ footer {
         padding-left: 0.75rem;
     }
 
-    p {
-        margin-bottom: 1.5625rem;
-    }
-
     ul {
         padding-left: 1.25rem;
-        margin-bottom: 3.125rem;
     }
 
     ul li {
         padding-left: 1.5625rem;
-        margin-bottom: 0.875rem;
-    }
-
-    footer {
-        margin-top: 3.75rem;
-        padding: 0.9375rem 0;
     }
 }
 
-/* Solo para celulares muy pequeños, cambios ultra-mínimos */
+/* Para celulares muy pequeños (<480px): Cambios mínimos, solo reduce gaps si envuelve */
 @media (max-width: 480px) {
-    nav ul {
-        gap: 0.625rem;
-    }
-
     nav ul li a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         padding: 0.5rem 1rem;
     }
 
