@@ -155,35 +155,69 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive - Mejoras para que se vea similar al desktop */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
     nav ul {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 20px;
+        flex-wrap: wrap; /* Permite que los items se envuelvan si no caben, manteniendo horizontal */
+        gap: 15px; /* Reduce gap para mejor ajuste */
+        padding: 0 15px; /* Padding lateral suave */
+        justify-content: center; /* Centrado para mantener simetría */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Ligeramente más pequeño para caber mejor */
+        padding: 10px 20px; /* Reduce padding */
+        gap: 10px; /* Ajuste en flex items */
     }
 
     header {
-        padding: 20px 0;
-        border-radius: 0;
-        max-width: 100%;
+        padding: 12px 0;
+        border-radius: 8px; /* Mantiene algo de redondeo */
+        max-width: 95%; /* Usa más ancho disponible */
         margin-bottom: 30px;
     }
 
     main {
-        padding: 30px 20px;
+        padding: 30px 30px; /* Más padding que antes, para no sentirse apretado */
         margin: 30px auto;
+        max-width: 95%; /* Usa más ancho en móvil */
+        border-radius: 12px; /* Mantiene redondeo */
     }
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem; /* Mayor que el original para no perder impacto */
+        margin-bottom: 40px;
+        letter-spacing: 0.8px;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem; /* Mayor que el original */
+        margin-top: 40px;
+        padding-left: 12px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin-bottom: 50px;
     }
 
     ul li {
         font-size: 1rem;
+        padding-left: 25px;
+        margin-bottom: 14px;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 15px 0;
     }
 }
