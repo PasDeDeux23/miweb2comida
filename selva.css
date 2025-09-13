@@ -1,0 +1,168 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, #e6f0e9 0%, #a8d5ba 100%);
+    color: #1a3c34;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 3rem;
+    color: #1a3c34;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h1::after {
+    content: '';
+    width: 150px;
+    height: 6px;
+    background: linear-gradient(to right, #2e7d32, #4caf50);
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Container styling */
+.Padre {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hijo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3rem;
+    padding: 2.5rem 0;
+}
+
+.nieto {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 2rem;
+    border: 1px solid #e8f5e9;
+}
+
+.nieto:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.nieto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border: 2px solid #4caf50;
+}
+
+.nieto img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+}
+
+/* Text styling */
+.nieto h2 {
+    font-size: 2.2rem;
+    color: #1a3c34;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nieto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nieto ul li {
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+    color: #2e2e2e;
+    position: relative;
+    padding-left: 2.2rem;
+    transition: color 0.3s ease;
+}
+
+.nieto ul li:hover {
+    color: #2e7d32;
+}
+
+.nieto ul li::before {
+    content: '🍃';
+    position: absolute;
+    left: 0;
+    color: #2e7d32;
+    font-size: 1.3rem;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1a3c34;
+    color: #e6f0e9;
+    margin-top: auto;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .hijo {
+        grid-template-columns: 1fr;
+    }
+
+    .nieto img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+        padding: 2rem 1rem;
+    }
+
+    .nieto {
+        padding: 1.5rem;
+    }
+
+    .nieto h2 {
+        font-size: 1.8rem;
+    }
+
+    .nieto ul li {
+        font-size: 1rem;
+    }
+}
